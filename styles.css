@@ -1,0 +1,166 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar el desbordamiento horizontal cuando se expanda un exoplaneta */
+}
+
+header {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.banner {
+    flex-grow: 1;
+    height: 640px; /* Aumentar la altura del banner a 600px */
+    background-color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description h1 {
+    font-size: 36px;
+    font-family: 'Matematie', serif;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.exoplanets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.exoplanet {
+    background-color: #333;
+    border: 1px solid #555;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.exoplanet.expanded {
+    width: 400px;
+    height: 400px;
+    transform: scale(1.2);
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.exoplanet .image-container {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.exoplanet.expanded .image-container {
+    height: 50%;
+}
+
+.exoplanet .info {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.exoplanet.expanded .info {
+    display: block;
+    opacity: 1;
+    bottom: 20px;
+}
+
+.exoplanet .name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.exoplanet.expanded .name {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.social-media {
+    margin: 20px 0;
+}
+
+.instagram {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.instagram:hover {
+    text-decoration: underline;
+}
